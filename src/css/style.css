@@ -1,6 +1,8 @@
 :root {
     --alive-color: blanchedalmond;
     --dead-color: midnightblue;
+    --cell-hover-color: blueviolet;
+    --cell-size: 5px
 }
 
 body {
@@ -39,8 +41,9 @@ body {
 }
 
 .cell {
-    height: 5px;
-    width: 5px;
+    height: var(--cell-size);
+    width: var(--cell-size);
+    cursor: pointer;
 }
 
 .cell[data-alive='1']{
@@ -49,6 +52,10 @@ body {
 
 .cell[data-alive='0']{
     background-color: var(--dead-color);
+}
+
+.cell:hover {
+    background-color:var(--cell-hover-color);
 }
 
 
