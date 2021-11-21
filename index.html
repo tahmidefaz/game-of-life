@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div id="main">
+        <h2>Conway's Game of Life</h2>
+        <div id="app"></div>
+        <div id="buttons">
+            <button class="ui-button" id="randomize">Randomize</button>
+            <button class="ui-button" id="toggle-sim">Start</button>
+            <button class="ui-button" id="run-once">Run Once</button>
+            <button class="ui-button" id="clear-board">Clear</button>
+        </div>
+        <div id="sim-speed-div">
+            <p id="sim-speed-text">Simulation Speed (ms)</p>
+            <input id="sim-speed-ms" type="number" placeholder="500">
+        </div>
+    </div>
+</body>
+<script src="src/js/main.js"></script>
+</html>

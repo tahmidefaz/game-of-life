@@ -1,0 +1,77 @@
+:root {
+    --alive-color: blanchedalmond;
+    --dead-color: midnightblue;
+}
+
+body {
+    background-color: black;
+    color: var(--alive-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons {
+    margin: 2%
+}
+
+.ui-button {
+    height: 30px;
+    width: 90px;
+    padding: 1%;
+    border: 0;
+    border-radius: 0%;
+    background-color: var(--dead-color);
+    color: var(--alive-color);
+}
+.ui-button:active {
+    background-color: var(--alive-color);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    height: 5px;
+    width: 5px;
+}
+
+.cell[data-alive='1']{
+    background-color: var(--alive-color);
+}
+
+.cell[data-alive='0']{
+    background-color: var(--dead-color);
+}
+
+
+#sim-speed-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#sim-speed-text {
+    padding-right: 20px;
+}
+#sim-speed-ms {
+    width: 50px;
+    height: 20px;
+    text-align: right;
+}
+
+#toggle-sim[data-value='start'] {
+    background-color: var(--dead-color);
+    color: var(--alive-color);
+}
+#toggle-sim[data-value='stop'] {
+    background-color: var(--alive-color);
+    color: var(--dead-color);
+}
