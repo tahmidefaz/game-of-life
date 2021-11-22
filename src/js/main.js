@@ -95,6 +95,9 @@ class Board {
 
         birthCellArr.forEach(([row,col]) => this.birthCell(row, col))
         killCellArr.forEach(([row, col]) => this.killCell(row, col))
+
+        console.log("counter node", counterNode.innerText)
+        counterNode.innerText = parseInt(counterNode.innerText, 10) + 1
     }
 
     randomizeBoard() {
@@ -134,6 +137,8 @@ function clearBoardHandler() {
     board.cells.forEach((row) => {
         row.forEach((cell) => cell.dataset.alive = "0")
     })
+
+    counterNode.innerText = "0"
 }
 
 function randomizeHandler() {
@@ -166,3 +171,6 @@ document.getElementById("run-once").addEventListener("click", runOnceHandler)
 document.getElementById("clear-board").addEventListener("click", clearBoardHandler)
 document.getElementById("toggle-sim").addEventListener("click", toggleSimHandler)
 document.getElementById("randomize").addEventListener("click", randomizeHandler)
+
+const counterNode = document.getElementById("gen-counter")
+counterNode.innerText = "0"
